@@ -9,6 +9,7 @@ all: $(bin_name)
 
 $(bin_name):
 	git submodule update --init --recursive
+	rm -rfd $(qmk_map)
 	cp -r ./src $(qmk_map)
 	(cd $(qmk_dir) && util/docker_build.sh $(keymap))
 	mv $(qmk_dir)/.build/$(bin_name) out/.
