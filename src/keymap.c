@@ -19,22 +19,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [NAV] = LAYOUT_split_3x6_3(
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
-        XXXXXXX ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,KC_VOLU ,                      KC_ESC  ,KC_HOME ,KC_END  ,KC_BRIU ,KC_BRID ,XXXXXXX ,
+        XXXXXXX ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,XXXXXXX ,                      KC_ESC  ,KC_HOME ,KC_END  ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,KC_VOLD ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,XXXXXXX ,
+        XXXXXXX ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,XXXXXXX ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,EMOJI   ,KC_MPRV ,KC_MPLY ,KC_MNXT ,KC_MUTE ,                      KC_TAB  ,KC_PGDN ,KC_PGUP ,XXXXXXX ,KC_ENT  ,MO(CFG) ,
+        XXXXXXX ,EMOJI   ,XXXXXXX ,XXXXXXX ,TR_TMUX ,XXXXXXX ,                      KC_TAB  ,TR_SCDN ,TR_SCUP ,XXXXXXX ,KC_ENT  ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                             XXXXXXX ,KC_TRNS ,KC_LSFT ,    KC_SPC  ,LA_SYM  ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [NUM] = LAYOUT_split_3x6_3(
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
-        XXXXXXX ,XXXXXXX ,KC_P7   ,KC_P8   ,KC_P9   ,XXXXXXX ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+        XXXXXXX ,XXXXXXX ,NO_7    ,NO_8    ,NO_9    ,XXXXXXX ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,XXXXXXX ,KC_P4   ,KC_P5   ,KC_P6   ,XXXXXXX ,                      XXXXXXX ,OS_CMD  ,OS_ALT  ,OS_CTRL ,OS_SHFT ,XXXXXXX ,
+        XXXXXXX ,XXXXXXX ,NO_4    ,NO_5    ,NO_6    ,XXXXXXX ,                      XXXXXXX ,OS_CMD  ,OS_ALT  ,OS_CTRL ,OS_SHFT ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,XXXXXXX ,KC_P1   ,KC_P2   ,KC_P3   ,KC_P0   ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MO(CFG) ,
+        XXXXXXX ,XXXXXXX ,NO_1    ,NO_2    ,NO_3    ,NO_0    ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                             XXXXXXX ,LA_SYM  ,KC_LSFT ,    KC_SPC  ,KC_TRNS ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,NO_QUES ,NO_QUOT ,NO_ASTR ,NO_SEMI ,NO_PLUS ,                      NO_DOT  ,NO_PIPE ,NO_LCBR ,NO_RCBR ,NO_AT   ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,NO_USCR ,NO_MINS ,                      NO_COMM ,NO_BLSH ,NO_LBRC ,NO_RBRC ,NO_DOT  ,MO(CFG) ,
+        XXXXXXX ,XXXXXXX ,NO_CLON ,XXXXXXX ,NO_USCR ,NO_MINS ,                      NO_COMM ,NO_BLSH ,NO_LBRC ,NO_RBRC ,NO_DOT  ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                             XXXXXXX ,KC_TRNS ,KC_LSFT ,    KC_SPC  ,KC_TRNS ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
