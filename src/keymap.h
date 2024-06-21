@@ -83,6 +83,8 @@
 #define TR_TMUX C(NO_A) // Tmux trigger
 #define TR_SCDN C(NO_D) // Scroll down
 #define TR_SCUP C(NO_U) // Scroll up
+#define TR_JMPF C(NO_I) // Jump forwards
+#define TR_JMPB C(NO_O) // Jump backwards
 
 #define SW_NTAB C(KC_TAB)    // Next tab
 #define SW_PTAB C(S(KC_TAB)) // Prev tab

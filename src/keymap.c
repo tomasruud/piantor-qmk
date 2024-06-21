@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [NAV] = LAYOUT_split_3x6_3(
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
-        XXXXXXX ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,XXXXXXX ,                      KC_ESC  ,KC_HOME ,KC_END  ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+        XXXXXXX ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,XXXXXXX ,                      KC_ESC  ,KC_HOME ,KC_END  ,TR_JMPF ,TR_JMPB ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,XXXXXXX ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,NO_QUES ,NO_QUOT ,NO_ASTR ,NO_SEMI ,NO_PLUS ,                      NO_DOT  ,NO_PIPE ,NO_LCBR ,NO_RCBR ,NO_AT   ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,XXXXXXX ,NO_CLON ,XXXXXXX ,NO_USCR ,NO_MINS ,                      NO_COMM ,NO_BLSH ,NO_LBRC ,NO_RBRC ,NO_DOT  ,MO(CFG) ,
+        XXXXXXX ,NO_LABK ,NO_RABK ,NO_CLON ,NO_USCR ,NO_MINS ,                      NO_COMM ,NO_BLSH ,NO_LBRC ,NO_RBRC ,NO_DOT  ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                             XXXXXXX ,KC_TRNS ,KC_LSFT ,    KC_SPC  ,KC_TRNS ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
