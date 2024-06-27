@@ -35,7 +35,7 @@ func main() {
 				fmt.Println("Layer " + ln[5:8])
 			} else if strings.HasPrefix(tln, ")") {
 			} else {
-				fmt.Println(ln[7:])
+				fmt.Println(strings.ReplaceAll(ln[7:], "XXXXXXX", "       "))
 			}
 
 			i++
