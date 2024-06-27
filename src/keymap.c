@@ -1,8 +1,8 @@
 #include QMK_KEYBOARD_H
 
+#include "keymap.h"
 #include "oneshot.h"
 #include "swapper.h"
-#include "keymap.h"
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -21,16 +21,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
         XXXXXXX ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,XXXXXXX ,                      KC_ESC  ,KC_HOME ,KC_END  ,TR_JMPF ,TR_JMPB ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,XXXXXXX ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,XXXXXXX ,
+        XXXXXXX ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,TR_COPY ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,EMOJI   ,XXXXXXX ,XXXXXXX ,TR_TMUX ,XXXXXXX ,                      KC_TAB  ,TR_SCDN ,TR_SCUP ,XXXXXXX ,KC_ENT  ,MO(CFG) ,
+        XXXXXXX ,EMOJI   ,XXXXXXX ,XXXXXXX ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,TR_SCDN ,TR_SCUP ,XXXXXXX ,KC_ENT  ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                             XXXXXXX ,KC_TRNS ,KC_LSFT ,    KC_SPC  ,LA_SYM  ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [NUM] = LAYOUT_split_3x6_3(
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
-        XXXXXXX ,XXXXXXX ,NO_7    ,NO_8    ,NO_9    ,XXXXXXX ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+        XXXXXXX ,XXXXXXX ,NO_7    ,NO_8    ,NO_9    ,XXXXXXX ,                      XXXXXXX ,NO_TILD ,NO_ACUT ,NO_GRV  ,NO_CIRC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,XXXXXXX ,NO_4    ,NO_5    ,NO_6    ,XXXXXXX ,                      XXXXXXX ,OS_CMD  ,OS_ALT  ,OS_CTRL ,OS_SHFT ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤

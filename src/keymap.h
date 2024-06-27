@@ -51,8 +51,8 @@
 #define NO_RPAR S(KC_9)       // )
 #define NO_LBRC A(KC_8)       // [
 #define NO_RBRC A(KC_9)       // ]
-#define NO_LABK KC_GRV          // <
-#define NO_RABK S(KC_GRV)       // >
+#define NO_LABK KC_GRV        // <
+#define NO_RABK S(KC_GRV)     // >
 #define NO_BLSH S(A(KC_7))    // (backslash)
 #define NO_PIPE A(KC_7)       // |
 #define NO_SLSH S(KC_7)       // /
@@ -85,10 +85,12 @@
 #define TR_SCUP C(NO_U) // Scroll up
 #define TR_JMPF C(NO_I) // Jump forwards
 #define TR_JMPB C(NO_O) // Jump backwards
+#define TR_COPY G(NO_C) // Copy
+#define TR_PAST G(NO_V) // Paste
 
 #define SW_NTAB C(KC_TAB)    // Next tab
 #define SW_PTAB C(S(KC_TAB)) // Prev tab
-#define EMOJI G(C(KC_SPC)) // Emoji
+#define EMOJI G(C(KC_SPC))   // Emoji
 
 #define LA_SYM MO(SYM) // Symbol layer
 #define LA_NAV MO(NAV) // Navigation layer
