@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,TR_COPY ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,EMOJI   ,XXXXXXX ,XXXXXXX ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,TR_SCDN ,TR_SCUP ,XXXXXXX ,KC_ENT  ,MO(CFG) ,
+        XXXXXXX ,EMOJI   ,TR_WCTR ,TR_WGRW ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,TR_SCDN ,TR_SCUP ,XXXXXXX ,KC_ENT  ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                             XXXXXXX ,KC_TRNS ,KC_LSFT ,    KC_SPC  ,LA_SYM  ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
         XXXXXXX ,XXXXXXX ,NO_7    ,NO_8    ,NO_9    ,XXXXXXX ,                      XXXXXXX ,NO_TILD ,NO_ACUT ,NO_GRV  ,NO_CIRC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,XXXXXXX ,NO_4    ,NO_5    ,NO_6    ,XXXXXXX ,                      XXXXXXX ,OS_CMD  ,OS_ALT  ,OS_CTRL ,OS_SHFT ,XXXXXXX ,
+        XXXXXXX ,XXXXXXX ,NO_4    ,NO_5    ,NO_6    ,XXXXXXX ,                      XXXXXXX ,OS_RCMD ,OS_ALT  ,OS_CTRL ,OS_SHFT ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,XXXXXXX ,NO_1    ,NO_2    ,NO_3    ,NO_0    ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
@@ -83,6 +83,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
   case OS_CTRL:
   case OS_ALT:
   case OS_CMD:
+  case OS_RCMD:
     return true;
   default:
     return false;
@@ -96,15 +97,17 @@ oneshot_state os_shft_state = os_up_unqueued;
 oneshot_state os_ctrl_state = os_up_unqueued;
 oneshot_state os_alt_state = os_up_unqueued;
 oneshot_state os_cmd_state = os_up_unqueued;
+oneshot_state os_rcmd_state = os_up_unqueued;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   update_swapper(&sw_app_active, KC_LGUI, KC_TAB, SW_APP, keycode, record);
-  update_swapper(&sw_win_active, KC_LGUI, NO_QUOT, SW_WIN, keycode, record);
+  update_swapper(&sw_win_active, KC_LGUI, NO_LABK, SW_WIN, keycode, record);
 
   update_oneshot(&os_shft_state, KC_LSFT, OS_SHFT, keycode, record);
   update_oneshot(&os_ctrl_state, KC_LCTL, OS_CTRL, keycode, record);
   update_oneshot(&os_alt_state, KC_LALT, OS_ALT, keycode, record);
   update_oneshot(&os_cmd_state, KC_LCMD, OS_CMD, keycode, record);
+  update_oneshot(&os_rcmd_state, KC_RCMD, OS_RCMD, keycode, record);
 
   return true;
 }

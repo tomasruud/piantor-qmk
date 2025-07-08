@@ -88,6 +88,9 @@
 #define TR_COPY G(NO_C) // Copy
 #define TR_PAST G(NO_V) // Paste
 
+#define TR_WCTR C(S(A(NO_G)))    // Center window
+#define TR_WGRW C(S(A(NO_PLUS))) // Grow window
+
 #define SW_NTAB C(KC_TAB)    // Next tab
 #define SW_PTAB C(S(KC_TAB)) // Prev tab
 #define EMOJI G(C(KC_SPC))   // Emoji
@@ -102,9 +105,10 @@ enum keycodes {
   OS_CTRL,
   OS_ALT,
   OS_CMD,
+  OS_RCMD,
 
   SW_APP, // Switch to next app (cmd-tab)
-  SW_WIN, // Switch to next window (cmd-')
+  SW_WIN, // Switch to next window (cmd-<)
 };
 
 enum layers {
