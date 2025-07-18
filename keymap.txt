@@ -10,11 +10,11 @@ Layer DEF
                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
 Layer NAV
 ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
-         ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,        ,                      KC_ESC  ,KC_HOME ,KC_END  ,TR_JMPF ,TR_JMPB ,        ,
+         ,SW_APP  ,SW_WIN  ,SW_PTAB ,SW_NTAB ,        ,                      KC_ESC  ,TR_SCDN ,TR_SCUP ,TR_JMPF ,TR_JMPB ,        ,
 ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
          ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_CMD  ,TR_COPY ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,KC_BSPC ,        ,
 ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-         ,EMOJI   ,TR_WCTR ,TR_WGRW ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,TR_SCDN ,TR_SCUP ,        ,KC_ENT  ,MO(CFG) ,
+         ,EMOJI   ,TR_WCTR ,TR_WGRW ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,KC_HOME ,KC_END  ,        ,KC_ENT  ,MO(CFG) ,
 ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
                                              ,KC_TRNS ,KC_LSFT ,    KC_SPC  ,LA_SYM  ,       
                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
