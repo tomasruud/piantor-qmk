@@ -14,29 +14,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,NO_Z    ,NO_X    ,NO_C    ,NO_V    ,NO_B    ,                      NO_N    ,NO_M    ,NO_ARNG ,NO_AE   ,XXXXXXX ,XXXXXXX ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,KC_LSFT ,LA_NAV  ,    KC_SPC  ,LA_NUM  ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,LA_NAV  ,    LA_NUM  ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [NAV] = LAYOUT_split_3x6_3(
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
-        XXXXXXX ,XXXXXXX ,XXXXXXX ,SW_PTAB ,SW_NTAB ,NO_CLON ,                      KC_ESC  ,KC_PGDN ,KC_PGUP ,TR_JMPF ,TR_JMPB ,XXXXXXX ,
+        XXXXXXX ,XXXXXXX ,SW_PTAB ,SW_NTAB ,KC_CAPS ,NO_CLON ,                      KC_ESC  ,KC_PGDN ,KC_PGUP ,TR_JMPF ,TR_JMPB ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,OS_ALT  ,OS_CTRL ,OS_SHFT ,OS_CMD  ,TR_COPY ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,XXXXXXX ,XXXXXXX ,
+        XXXXXXX ,OS_CMD  ,OS_ALT  ,OS_CTRL ,OS_SHFT ,TR_COPY ,                      KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,XXXXXXX ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,EMOJI   ,SW_APP  ,SW_WIN  ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,KC_HOME ,KC_END  ,TR_WCTR ,TR_WGRW ,MO(CFG) ,
+        XXXXXXX ,EMOJI   ,SW_WIN  ,SW_APP  ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,KC_HOME ,KC_END  ,TR_WCTR ,TR_WGRW ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,KC_LSFT ,KC_TRNS ,    KC_ENT  ,LA_SYM  ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    LA_SYM  ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [NUM] = LAYOUT_split_3x6_3(
     // ╭────────┬────────┬────────┬────────┬────────┬────────╮                     ╭────────┬────────┬────────┬────────┬────────┬────────╮
         XXXXXXX ,XXXXXXX ,NO_7    ,NO_8    ,NO_9    ,NO_COMM ,                      XXXXXXX ,NO_TILD ,NO_ACUT ,NO_GRV  ,NO_CIRC ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,XXXXXXX ,NO_4    ,NO_5    ,NO_6    ,NO_DOT  ,                      KC_BSPC ,OS_RCMD ,OS_SHFT ,OS_CTRL ,OS_ALT  ,XXXXXXX ,
+        XXXXXXX ,XXXXXXX ,NO_4    ,NO_5    ,NO_6    ,NO_DOT  ,                      KC_BSPC ,OS_SHFT ,OS_CTRL ,OS_ALT  ,OS_RCMD ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,XXXXXXX ,NO_1    ,NO_2    ,NO_3    ,NO_0    ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,KC_BSPC ,LA_SYM  ,    KC_SPC  ,KC_TRNS ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,LA_SYM  ,    KC_TRNS ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [SYM] = LAYOUT_split_3x6_3(
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,NO_PERC ,NO_LABK ,NO_RABK ,NO_USCR ,NO_MINS ,                      NO_AT   ,NO_LBRC ,NO_RBRC ,NO_BLSH ,XXXXXXX ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,KC_LSFT ,KC_TRNS ,    KC_SPC  ,KC_TRNS ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    KC_TRNS ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [CFG] = LAYOUT_split_3x6_3(
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_TRNS ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    XXXXXXX ,KC_TRNS ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    KC_TRNS ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
 };

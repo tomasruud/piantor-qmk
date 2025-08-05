@@ -95,9 +95,9 @@
 #define SW_PTAB C(S(KC_TAB)) // Prev tab
 #define EMOJI G(C(KC_SPC))   // Emoji
 
-#define LA_SYM MO(SYM) // Symbol layer
-#define LA_NAV MO(NAV) // Navigation layer
-#define LA_NUM MO(NUM) // Number layer
+#define LA_SYM LT(SYM, KC_ENT) // Symbol layer
+#define LA_NAV MO(NAV)         // Navigation layer
+#define LA_NUM LT(NUM, KC_SPC) // Number layer
 
 enum keycodes {
   // Custom oneshot mod implementation with no timers.
