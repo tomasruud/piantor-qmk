@@ -88,8 +88,8 @@
 #define TR_COPY G(NO_C) // Copy
 #define TR_PAST G(NO_V) // Paste
 
-#define TR_WCTR C(S(A(NO_G)))    // Center window
-#define TR_WGRW C(S(A(NO_PLUS))) // Grow window
+#define TR_WCTR C(S(A(NO_G))) // Center window
+#define TR_WGRW C(S(A(NO_M))) // Maximise window
 
 #define SW_NTAB C(KC_TAB)    // Next tab
 #define SW_PTAB C(S(KC_TAB)) // Prev tab
