@@ -12,9 +12,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,NO_A    ,NO_S    ,NO_D    ,NO_F    ,NO_G    ,                      NO_H    ,NO_J    ,NO_K    ,NO_L    ,NO_OSTR ,XXXXXXX ,
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
-        XXXXXXX ,NO_Z    ,NO_X    ,NO_C    ,NO_V    ,NO_B    ,                      NO_N    ,NO_M    ,NO_ARNG ,NO_AE   ,XXXXXXX ,XXXXXXX ,
+        XXXXXXX ,NO_Z    ,NO_X    ,NO_C    ,NO_V    ,NO_B    ,                      NO_N    ,NO_M    ,NO_ARNG ,NO_AE   ,XXXXXXX ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,XXXXXXX ,LA_NAV  ,    LA_NUM  ,XXXXXXX ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,LA_NAV  ,    LA_NUMS ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [NAV] = LAYOUT_split_3x6_3(
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,EMOJI   ,SW_WIN  ,SW_APP  ,TR_TMUX ,TR_PAST ,                      KC_TAB  ,KC_HOME ,KC_END  ,TR_WCTR ,TR_WGRW ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    LA_SYM  ,XXXXXXX ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    LA_NUME ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [NUM] = LAYOUT_split_3x6_3(
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├────────┼────────┼────────┼────────┼────────┼────────┤                     ├────────┼────────┼────────┼────────┼────────┼────────┤
         XXXXXXX ,XXXXXXX ,NO_1    ,NO_2    ,NO_3    ,NO_0    ,                      XXXXXXX ,NO_CLON ,XXXXXXX ,XXXXXXX ,XXXXXXX ,MO(CFG) ,
     // ╰────────┴────────┴────────┴────────┼────────┼────────┼────────╮   ╭────────├────────┼────────┼────────┴────────┴────────┴────────╯
-                                            XXXXXXX ,XXXXXXX ,LA_SYM  ,    KC_TRNS ,XXXXXXX ,XXXXXXX
+                                            XXXXXXX ,XXXXXXX ,KC_TRNS ,    KC_TRNS ,XXXXXXX ,XXXXXXX
     //                                     ╰────────┴────────┴────────╯   ╰────────┴────────┴────────╯
     ),
     [SYM] = LAYOUT_split_3x6_3(
@@ -75,9 +75,9 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
 
 bool is_oneshot_ignored_key(uint16_t keycode) {
   switch (keycode) {
-  case LA_NUM:
+  case LA_NUMS:
+  case LA_NUME:
   case LA_NAV:
-  case LA_SYM:
   case KC_LSFT:
   case OS_SHFT:
   case OS_CTRL:
@@ -110,4 +110,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   update_oneshot(&os_rcmd_state, KC_RCMD, OS_RCMD, keycode, record);
 
   return true;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    return update_tri_layer_state(state, NAV, NUM, SYM);
 }
