@@ -109,6 +109,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   update_oneshot(&os_cmd_state, KC_LCMD, OS_CMD, keycode, record);
   update_oneshot(&os_rcmd_state, KC_RCMD, OS_RCMD, keycode, record);
 
+  switch (keycode) {
+    case LA_NUMS:
+      // A little trick to not repeat space when layer key is held.
+
+      if (record->tap.count && record->event.pressed) {
+        tap_code(KC_SPC);
+        return false;
+      }
+
+      break;
+  }
+
   return true;
 }
 
