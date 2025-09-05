@@ -2,6 +2,8 @@
 
 #include QMK_KEYBOARD_H
 
+#define HOLD_ON_OTHER_KEY_PRESS
+
 // Key definitions for Norwegian MacOS layout
 
 #define __TODO__ KC_NO
