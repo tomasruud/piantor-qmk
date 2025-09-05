@@ -99,15 +99,14 @@
 #define LA_NUMS LT(NUM, KC_SPC) // Number layer
 #define LA_NUME LT(NUM, KC_ENT) // Number layer
 
-enum keycodes {
-  // Custom oneshot mod implementation with no timers.
-  OS_SHFT = SAFE_RANGE,
-  OS_CTRL,
-  OS_ALT,
-  OS_CMD,
-  OS_RCMD,
+#define OS_SHFT OSM(MOD_LSFT)
+#define OS_CTRL OSM(MOD_LCTL)
+#define OS_ALT OSM(MOD_LALT)
+#define OS_GUI OSM(MOD_LGUI)
+#define OS_RGUI OSM(MOD_RGUI)
 
-  SW_APP, // Switch to next app (cmd-tab)
+enum keycodes {
+  SW_APP = SAFE_RANGE, // Switch to next app (cmd-tab)
   SW_WIN, // Switch to next window (cmd-<)
 };
 
